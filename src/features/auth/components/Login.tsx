@@ -38,12 +38,12 @@ export default function Login({ toggle }: { toggle: () => void }) {
 
   // Google Handler function
   async function handleGoogleSignin() {
-    signIn('google', { callbackUrl: 'http://localhost:3000/tasks' });
+    signIn('google', { callbackUrl: '/tasks' });
   }
 
   // Github Login
   async function handleGithubSignin() {
-    signIn('github', { callbackUrl: 'http://localhost:3000/tasks' });
+    signIn('github', { callbackUrl: '/tasks' });
   }
 
   return (

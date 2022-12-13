@@ -31,7 +31,7 @@ export default function Register({ toggle }: { toggle: () => void }) {
       data: values,
     };
 
-    const res = await axiosInstance('http://localhost:3000/api/auth/signup', options);
+    const res = await axiosInstance('/api/auth/signup', options);
     if (res.status === 201) {
       alert('register success');
       toggle();
