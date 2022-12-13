@@ -1,7 +1,7 @@
-import { authErrors, loginInfo, registerInfo } from "../type";
+import { authErrors, loginInfo, registerInfo } from '../type';
 
-export default function loginValidate(values : loginInfo) {
-  const errors :authErrors = {};
+export default function loginValidate(values: loginInfo) {
+  const errors: authErrors = {};
 
   if (!values.email) {
     errors.email = 'Required';
@@ -21,8 +21,8 @@ export default function loginValidate(values : loginInfo) {
   return errors;
 }
 
-export function registerValidate(values:registerInfo) {
-  const errors :authErrors= {};
+export function registerValidate(values: registerInfo) {
+  const errors: authErrors = {};
 
   if (!values.username) {
     errors.username = 'Required';
