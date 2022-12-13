@@ -1,12 +1,22 @@
 # Tasks 관리 앱
 
-사용 스택 :
+## 기능
+
+:one: auth 기능
+
+- nextAuth를 사용한 oAuth 및 credenctial 회원가입
+
+:two: DIP
+
+- next middleware를 사용하여 권한없는 접근방지
+
+## 사용 스택 :
 
 - TS
-- NextJS
+- nextJS
+- nextAuth
 - Twin.macro
-- Styled-component
-- TailwindCSS
+- mongoose
 
 ## commit msg 규칙
 
