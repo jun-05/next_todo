@@ -1,10 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import tw from 'twin.macro';
 import Auth from '../features/auth';
 
 const Home: NextPage = () => {
-  return <Auth />;
+  return (
+    <>
+      <Head>
+        <title>Login</title>
+      </Head>
+      <Auth />
+    </>
+  );
 };
 
 export default Home;

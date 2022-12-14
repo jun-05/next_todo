@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import Link from 'next/link';
 import styles from '../styles/Form.module.css';
 import Image from 'next/image';
 import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
@@ -48,10 +46,6 @@ export default function Login({ toggle }: { toggle: () => void }) {
 
   return (
     <>
-      <Head>
-        <title>Login</title>
-      </Head>
-
       <section className="w-3/4 mx-auto flex flex-col gap-10">
         <div className="title">
           <h1 className="text-gray-800 text-4xl font-bold py-4">Tasks_APP</h1>

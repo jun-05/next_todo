@@ -38,7 +38,7 @@ const Header = () => {
           <div className="absolute flex  bottom-10">
             <ProgressWrapper>
               <svg className="circle_progress" viewBox="0 0 120 120">
-                <circle className="frame" cx="60" cy="60" r="54" stroke-width="12" />
+                <circle className="frame" cx="60" cy="60" r="54" strokeWidth="12" />
                 <circle
                   className="bar"
                   cx="60"
