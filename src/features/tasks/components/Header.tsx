@@ -25,7 +25,7 @@ const Header = () => {
           <div className="opacity-60">{parseDateNow()}</div>
         </div>
         <div className="relative flex items-center justify-center flex-grow z-10">
-          <div className="flex space-x-10">
+          <div className="flex space-x-4 md:space-x-10">
             <TasksCountTextBlock>
               10
               <p>Personal</p>
@@ -35,7 +35,7 @@ const Header = () => {
             </TasksCountTextBlock>
           </div>
 
-          <div className="absolute flex  bottom-10">
+          <div className="absolute flex bottom-2 md:bottom-10">
             <ProgressWrapper>
               <svg className="circle_progress" viewBox="0 0 120 120">
                 <circle className="frame" cx="60" cy="60" r="54" strokeWidth="12" />
