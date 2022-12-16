@@ -1,0 +1,27 @@
+.input_wrapper {
+  @apply relative flex w-3/4 md:w-5/6 items-center;
+}
+
+.select_style{
+  @apply w-3/4 md:w-5/6 p-1 text-white bg-inherit border-b border-slate-200 focus:bg-slate-400 focus:border-slate-400 outline-none
+}
+
+.input_style {
+  @apply w-full p-2 pr-0  text-white bg-inherit border-b border-slate-200 focus:bg-sky-800  outline-none;
+}
+
+.input_style_text {
+  @apply w-full p-2 pr-5  text-white bg-inherit border-b border-slate-200 focus:bg-sky-800  outline-none;
+}
+
+.input_icon_wrapper{
+  @apply absolute z-10 right-0 text-xl text-black
+}
+
+.button {
+  @apply w-3/4 md:w-5/6 p-2 text-white bg-blue-600  shadow-md
+}
+
+.button:hover {
+  @apply bg-blue-700
+}

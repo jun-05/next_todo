@@ -8,7 +8,7 @@ const Button = () => {
   const router = useRouter();
 
   return (
-    <CreateButton onClick={() => router.push('/tasks/add')}>
+    <CreateButton onClick={() => router.push('/task/add')}>
       <AiOutlinePlus />
     </CreateButton>
   );
