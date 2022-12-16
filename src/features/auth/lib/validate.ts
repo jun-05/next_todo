@@ -1,4 +1,4 @@
-import { authErrors, loginInfo, registerInfo } from '../type';
+import { authErrors, loginInfo, registerInfo } from '../type/authType';
 
 export default function loginValidate(values: loginInfo) {
   const errors: authErrors = {};

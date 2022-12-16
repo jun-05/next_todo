@@ -1,5 +1,5 @@
 import React from 'react';
-import { useToggle } from '../../hooks/useToggle';
+import { useToggle } from '../common/hooks/useToggle';
 import Layout from './components/Layout';
 import Login from './components/Login';
 import Register from './components/Register';

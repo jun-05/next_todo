@@ -1,13 +1,11 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import styles from '../styles/Form.module.css';
-import Image from 'next/image';
 import { HiAtSymbol, HiFingerPrint, HiOutlineUser } from 'react-icons/hi';
 import { useState } from 'react';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/router';
 import { registerValidate } from '../lib/validate';
-import { registerInfo } from '../type';
+import { registerInfo } from '../type/authType';
 import axiosInstance from './../../../api/axiosInstance';
 
 export default function Register({ toggle }: { toggle: () => void }) {

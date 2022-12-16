@@ -6,7 +6,7 @@ import { signIn, signOut } from 'next-auth/react';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/router';
 import loginValidate from '../lib/validate';
-import { loginInfo } from '../type';
+import { loginInfo } from '../type/authType';
 
 export default function Login({ toggle }: { toggle: () => void }) {
   const [show, setShow] = useState(false);

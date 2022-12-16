@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import AddTask from './../../../features/task/AddTask';
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       <Head>
         <title>Add Task</title>
       </Head>
-      <div>Add Task</div>
+      <AddTask />
     </>
   );
 };
