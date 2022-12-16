@@ -1,8 +1,3 @@
-export type task = {
-  iconName: string;
-  title: string;
-  place: string;
-  note: string;
-  dueTime: string;
-  urgent: number;
-};
+import { task } from "../../task/type/TaskType";
+
+export type tasks = task[];

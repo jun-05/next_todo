@@ -1,12 +1,12 @@
 import React from 'react';
 import tw from 'twin.macro';
 
-import { GiPencilBrush, GiTie, GiRunningShoe, GiBookmarklet, GiNotebook } from 'react-icons/gi';
 import { MdPlace, MdLabelImportant } from 'react-icons/md';
 import { TbNotes } from 'react-icons/tb';
-import { task } from '../Type/TasksType';
-import { parseIcon } from '../lib/parseIcon';
+import { parseIcon } from '../../common/lib/parseIcon';
 import { parseUrgentColor } from './../lib/parseUrgentColor';
+
+import { task } from '../../task/type/TaskType';
 
 const TaskCard = ({ task }: { task: task }) => {
   const { iconName, title, note, place, dueTime, urgent } = task;

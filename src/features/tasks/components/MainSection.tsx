@@ -1,9 +1,9 @@
 import React from 'react';
 import tw from 'twin.macro';
-import { task } from '../Type/TasksType';
+import { tasks } from '../Type/TasksType';
 import TaskCard from './TaskCard';
 
-const MainSection = ({ tasks }: { tasks: task[] }) => {
+const MainSection = ({ tasks }: { tasks: tasks }) => {
   return (
     <MainSectionBlock>
       <div className="font-bold text-gray-400">INBOX</div>
