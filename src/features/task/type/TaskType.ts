@@ -1,11 +1,11 @@
 export type task = {
-  id?:number;
+  id?: number;
   iconName: string;
-  taskType: string,
+  taskType: string;
   title: string;
   place: string;
   note: string;
   dueTime: string;
   urgent: number;
-  done?:boolean;
+  done?: boolean;
 };

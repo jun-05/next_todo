@@ -1,3 +1,3 @@
-import { task } from "../../task/type/TaskType";
+import { task } from '../../task/type/TaskType';
 
 export type tasks = task[];
