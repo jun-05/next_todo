@@ -4,7 +4,7 @@ import { MdTitle, MdPlace } from 'react-icons/md';
 import { TbNotes } from 'react-icons/tb';
 import { useRecoilState } from 'recoil';
 import tw from 'twin.macro';
-import { object, string, number } from 'Yup';
+import { object, string, number } from 'yup';
 
 import taskItemState from '../recoil/taskRecoil';
 import styles from '../styles/Form.module.css';
