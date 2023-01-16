@@ -2,7 +2,7 @@ import connectMongo from '../../../database/conn';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { task } from '../../../features/task/type/TaskType';
 import { getSession } from 'next-auth/react';
-import { ObjectId } from 'mongodb'
+import { ObjectId } from 'mongodb';
 import Tasks from './../../../model/taskSchema';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,12 +15,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const session = await getSession({ req });
     if (!session) return res.status(401).json({ message: 'session is not valid...!' });
 
-    const {uid} = session.user
-    const { _id,dueTime,iconName,note,place,taskType,title,urgent,done} : task = req.body;
+    const { uid } = session.user;
+    const { _id, dueTime, iconName, note, place, taskType, title, urgent, done }: task = req.body;
 
     const data = await Tasks.updateOne(
-        { $and: [{'user.uid':uid},{'_id':new ObjectId(_id)} ] },  {
-            dueTime,iconName,note,place,taskType,title,urgent,done}
+      { $and: [{ 'user.uid': uid }, { _id: new ObjectId(_id) }] },
+      {
+        dueTime,
+        iconName,
+        note,
+        place,
+        taskType,
+        title,
+        urgent,
+        done,
+      }
     );
 
     return res.status(200).json(data);
