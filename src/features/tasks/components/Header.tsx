@@ -3,13 +3,24 @@ import tw from 'twin.macro';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import styled from 'styled-components';
 import { parseDateNow } from '../lib/parseDate';
+import { useTaksList } from '../hooks/useTasks';
+import { task } from '../../task/type/TaskType';
 
 // To adjust Circle Percentage
 const RADIUS = 54;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 const Header = () => {
-  const [pregress, setPregress] = useState(15);
+  const { data: result } = useTaksList();
+
+  const progress =
+    result?.data.length === 0
+      ? 0
+      : Math.round(
+          (result?.data.filter((item: task) => item.done === true).length / result?.data.length) *
+            100
+        );
+
   return (
     <HeaderBlock>
       <TasksBg />
@@ -27,11 +38,12 @@ const Header = () => {
         <div className="relative flex items-center justify-center flex-grow z-10">
           <div className="flex space-x-4 md:space-x-10">
             <TasksCountTextBlock>
-              10
+              {result?.data.filter((item: task) => item.taskType === 'Personal').length}
               <p>Personal</p>
             </TasksCountTextBlock>
             <TasksCountTextBlock>
-              5<p>Business</p>
+              {result?.data.filter((item: task) => item.taskType === 'Business').length}
+              <p>Business</p>
             </TasksCountTextBlock>
           </div>
 
@@ -46,11 +58,11 @@ const Header = () => {
                   r="54"
                   strokeWidth="12"
                   strokeDasharray={CIRCUMFERENCE}
-                  strokeDashoffset={CIRCUMFERENCE * (1 - pregress * 0.01)}
+                  strokeDashoffset={CIRCUMFERENCE * (1 - progress * 0.01)}
                 />
               </svg>
               <strong className="absolute top-0 left-0 right-0 bottom-0 leading-10 text-center text-[10px] font-thin ">
-                {pregress} %
+                {progress}%
               </strong>
             </ProgressWrapper>
           </div>

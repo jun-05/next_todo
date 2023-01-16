@@ -1,9 +1,14 @@
+.wrapper_width {
+  @apply m-auto lg:max-w-[1066px] w-3/4 md:w-5/6
+}
+
+
 .input_wrapper {
   @apply relative flex flex-col w-3/4 md:w-5/6 items-center;
 }
 
 .input_error_span {
-  @apply text-sm md:text-base text-red-300
+  @apply text-sm md:text-base text-red-300;
 }
 
 .select_style {
@@ -20,17 +25,24 @@
 
 
 .input_icon_wrapper {
-  @apply absolute z-10 right-0 text-xl text-black;
+  @apply absolute h-[40px] flex items-center z-10 right-0 text-xl text-black;
 }
 
 .button {
-  @apply w-3/4 md:w-5/6 p-2 text-white bg-blue-600  shadow-md;
+  @apply w-3/4 md:w-5/6 p-2 text-white bg-blue-500  shadow-md;
 }
 
 .button:hover {
-  @apply bg-blue-700;
+  @apply bg-blue-600;
 }
 
+.button_danger {
+  @apply w-3/4 md:w-5/6 p-2 text-white bg-red-500  shadow-md;
+}
+
+.button_danger:hover {
+  @apply bg-red-600;
+}
 
 .input_wrapper input[type='datetime-local']::before {
   opacity: 0.4;

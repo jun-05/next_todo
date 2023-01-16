@@ -5,6 +5,7 @@ const taskItemState = atom({
   default: {
     iconName: 'GiPencilBrush',
     showIconList: false,
+    done:false,
   },
 });
 
