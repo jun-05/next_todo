@@ -30,12 +30,12 @@ bg-cover
 bg-no-repeat
 `};
   background-image: url('/assets/img2.png');
-  background-position: 65% 100px;
+  background-position: 60% 100px;
 `;
 
 const CloudOne = keyframes`
   0%{
-    transform: translateX(250%);
+    transform: translateX(360%);
   }100%{
     transform: translateX(-250%);
   }
@@ -43,12 +43,11 @@ const CloudOne = keyframes`
 
 const CloudTwo = keyframes`
   0%{
-    transform: translateX(160%);
+    transform: translateX(200%);
   }100%{
-    transform: translateX(-250%);
+    transform: translateX(-270%);
   }
 `;
-
 const CloundBg = styled.div`
   ${tw`
 absolute 
