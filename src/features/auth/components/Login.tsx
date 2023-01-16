@@ -2,7 +2,7 @@ import styles from '../styles/Form.module.css';
 import Image from 'next/image';
 import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
 import { useState } from 'react';
-import { signIn, signOut } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/router';
 import loginValidate from '../lib/validate';
