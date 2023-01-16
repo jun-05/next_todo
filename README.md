@@ -1,22 +1,32 @@
 # Tasks 관리 앱
 
-## 기능
+## 프로젝트 설명
 
-:one: auth 기능
+- nextJS와 mongoDB를 사용하여 풀스택으로 구현한 todoList입니다.
+- 간단한 가입과 로그인을 통하여, 하고자 하는 작업(task)을 아이콘,마감 기한,중요도 및 기타 옵션 등을 설정하여 생성할수있고, 변경할 수 있습니다.
+- PC 환경과 모바일 환경을 고려한 반응형 디자인으로 구현하였습니다.
 
-- nextAuth를 사용한 oAuth 및 credenctial 회원가입
+## 구현 설명
 
-:two: DIP
-
-- next middleware를 사용하여 권한없는 접근방지
+- nextJS의 api를 사용한 풀스택으로 구현하였습니다.
+- nextAuth를 이용한 미들웨어를 사용하였고, credentail 계정 및 google,github을 사용하는 oAuth를 구현하였습니다.
+- tailwind를 사용하여 반응형 화면을 제작하였습니다.
+- recoil을 사용하여 다른 컴포넌트간의 값을 쉽게 가져와 사용할 수 있도록 하였습니다.
+- 작업을 생성 및 수정시 아이콘 이름을 저장하여, List 화면에서 아이콘과 함께 볼 수 있도록 하였습니다.
+- formik와 yup을 사용하여 form값을 check하고, 제한된 값을 넘을시 에러 메시지를 표시하도록 하였습니다.
+- features 폴더에서 각 구현기능에 맞는 파일들을 보관하도록 하였습니다.
 
 ## 사용 스택 :
 
-- TS
-- nextJS
-- nextAuth
+- NextJS
+- TypeScript
+- ReactQuery
+- Recoil
+- TailwindCSS
 - Twin.macro
-- mongoose
+- formik
+- yup
+- MongoDB
 
 ## commit msg 규칙
 
