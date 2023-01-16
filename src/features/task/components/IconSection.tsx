@@ -2,7 +2,6 @@ import React from 'react';
 import { useRecoilState } from 'recoil';
 import tw from 'twin.macro';
 import { parseIcon } from '../../common/lib/parseIcon';
-import { useIconChange } from '../hooks/useIconChange';
 import taskItemState from '../recoil/taskRecoil';
 import IconItem from './IconItem';
 
