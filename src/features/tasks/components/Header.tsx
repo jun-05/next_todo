@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import tw from 'twin.macro';
-import { HiMenuAlt1 } from 'react-icons/hi';
+import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import styled from 'styled-components';
 import { parseDateNow } from '../lib/parseDate';
 import { useTaksList } from '../hooks/useTasks';
 import { task } from '../../task/type/TaskType';
+import { useRecoilState } from 'recoil';
+import navItemState from '../recoil/NavRecoil';
 
-// To adjust Circle Percentage
+// circle 퍼센트를 위한 값
 const RADIUS = 54;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 const Header = () => {
   const { data: result } = useTaksList();
+  const [_, setNavItem] = useRecoilState(navItemState);
 
   const progress =
     result?.data.length === 0
@@ -21,14 +24,18 @@ const Header = () => {
             100
         );
 
+  const onClickNavMenu = () => {
+    setNavItem(prev => ({ ...prev, showNav: !prev.showNav }));
+  };
+
   return (
     <HeaderBlock>
       <TasksBg />
       <div className="relative flex text-white h-full">
         <div className="absolute top-0 right-0 w-2/5 h-full bg-gray-500 opacity-30" />
         <div className="flex flex-col w-3/5 p-5 justify-between">
-          <div className="cursor-pointer text-2xl md:text-4xl w-fit">
-            <HiMenuAlt1 />
+          <div className="cursor-pointer text-2xl md:text-4xl w-fit" onClick={onClickNavMenu}>
+            <AiOutlineMenuUnfold />
           </div>
           <div className="text-3xl md:text-6xl text-left font-serif">
             Your <p> Things</p>
